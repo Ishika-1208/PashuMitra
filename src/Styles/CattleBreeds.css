@@ -1,0 +1,82 @@
+.breeds-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #6B4226;
+  min-height: 100vh;
+}
+
+.hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.breeds-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.breeds-header input {
+  padding: 15px 12px;
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+.breeds-header h2 {
+  font-size: 35px;
+  margin-top: 10px;
+  color: #FFF0DE;
+}
+
+.breeds-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.breed-card {
+  background: #fff;
+  border: 2px solid #c19a6b;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.breed-card:hover {
+  transform: scale(1.03);
+}
+
+.breed-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.breed-card h3 {
+  margin: 10px 0 5px;
+  color: #5b2c06;
+}
+
+.breed-card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.breed-card button {
+  background: #8b4513;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.breed-card button:hover {
+  background: #5b2c06;
+}

@@ -1,0 +1,272 @@
+body{
+    background-color: #6B4226;
+}
+
+
+.breed-details {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+/* ----------------- HERO ----------------- */
+.hero {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 60%;
+  height: 380px;
+  object-fit: cover;
+  filter: brightness(0.65);
+  border-radius: 10px;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #f9f9f9;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ----------------- KEY FACTS ----------------- */
+.key-facts {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 1100px;
+}
+
+.key-facts h3 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #5b2c06;
+  margin-bottom: 25px;
+  border-bottom: 3px solid #c19a6b;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.facts-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.fact-card {
+  background: #fff8f0;
+  border: 2px solid #c19a6b;
+  border-radius: 12px;
+  padding: 18px;
+  width: 160px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.fact-card:hover {
+  background: #fbe4c7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(91, 44, 6, 0.2);
+}
+
+.fact-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.fact-label {
+  font-weight: bold;
+  color: #5b2c06;
+  font-size: 14px;
+}
+
+.fact-value {
+  font-size: 13px;
+  color: #333;
+  margin-top: 4px;
+}
+
+
+/* ----------------- DETAILS ----------------- */
+.details {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.details h2 {
+  color: #fbe4c7;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #c19a6b;
+  padding-bottom: 10px;
+  font-size: 26px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.details h3 {
+  margin-top: 25px;
+  margin-bottom: 8px;
+  color: #fbe4c7;
+  font-size: 20px;
+  text-align: center;
+   text-decoration: underline;
+}
+
+.details p {
+  font-size: 15.5px;
+  margin-bottom: 12px;
+  color: #fbe4c7;
+}
+
+.details ul {
+  font-size: 15.5px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: #fbe4c7;
+}
+
+.details ul li {
+  margin-bottom: 6px;
+}
+
+/* ----------------- GALLERY ----------------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 20%;
+  min-width: 220px;
+  border-radius: 10px;
+  border: 2px solid #c19a6b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .gallery img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero img {
+    height: 260px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    top: 28%;
+  }
+
+  .hero p {
+    font-size: 14px;
+    top: 44%;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+}
+/* Page Title (above image) */
+.page-title {
+  text-align: center;
+  margin: 30px 0 15px;
+}
+
+.page-title h1 {
+  font-size: 42px;
+  color: #fbe4c7;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.page-title p {
+  font-size: 18px;
+  color: #fbe4c7;
+  margin-top: 5px;
+}
+
+/* Key Facts Section */
+.key-facts {
+  text-align: center;
+  margin: 10px auto;
+  max-width: 1100px;
+}
+
+.key-facts h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fbe4c7;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Row for facts */
+.facts-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.fact {
+  background: #fff8f0;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 2px solid #c19a6b;
+  font-weight: 600;
+  font-size: 15px;
+  color: #5b2c06;
+  min-width: 220px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.fact:hover {
+  background: #fbe4c7;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(91, 44, 6, 0.15);
+}
+

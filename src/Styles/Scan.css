@@ -1,0 +1,147 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f9f7f1;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgba(107, 66, 38, 0.9);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+  color: #f0c27b;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 25px;
+  color: #6b4226;
+}
+
+#cameraPreview,
+.uploadedImage {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background: #ddd;
+  object-fit: cover;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #6b4226;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: #53321f;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+canvas {
+  display: none;
+  margin: 20px auto;
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.upload-label {
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  background-color: #6b4226;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.upload-label:hover {
+  background-color: #53321f;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .header nav {
+    margin-top: 10px;
+  }
+}
+
+
+.preview-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.preview-image {
+  max-width: 80%;
+  max-height: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.previewImage {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}

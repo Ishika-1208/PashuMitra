@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  background:url("C:\Users\ishik\OneDrive\Desktop\PashuMitra3\my-app\src\Images\roiImage.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #6B4226;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 350px;
+  border: 5px solid #FFF0DE;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: #FFF0DE;
+}
+
+.container input {
+  width: 90%;
+  padding: 10px;
+  margin: 15px 0px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  font-size: 16px;
+  background-color: #FFF0DE;
+}
+
+.container button {
+  background-color: #FFF0DE;
+  color: black;
+  border: none;
+  padding: 12px;
+  width: 50%;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.container button:hover {
+  background-color: #FFF0DEce;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  white-space: pre-line;
+}
+
+.profit {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.loss {
+  background-color: #f8d7da;
+  color: #721c24;
+}
