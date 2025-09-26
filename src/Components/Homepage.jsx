@@ -4,10 +4,11 @@ import "../Styles/Homepage.css";
 import Globe from "../Images/Globe.png";
 import Person from "../Images/Person.png";
 import missionicon from "../Images/missionicon.png";
-import camera from "../Images/camera.png";
-import AddImage from "../Images/AddImage.png";
+// import camera from "../Images/camera.png";
+// import AddImage from "../Images/AddImage.png";
 import featureicon from "../Images/featureicon.png";
 import feedbackprofile from "../Images/feedbackprofile.png";
+import qrCode from "../Images/qrcode.jpg";
 
 function Homepage() {
   return (
@@ -20,7 +21,7 @@ function Homepage() {
           <a href="#mission">About Us</a>
           <a href="#scan">Scan</a>
           <a href="#features">Features</a>
-          <a href="footer">Contact Us</a>
+          <a href="#footer">Contact Us</a>
         </nav>
         <div className="icons">
   <a to="#" className="lang"><img src={Globe} alt="lang" /></a>
@@ -78,24 +79,26 @@ function Homepage() {
 </section>
 
      {/* Scanning Section */}
-<section id="scan" className="scan">
-  <h3>Scanning Cattles</h3>
-  <div className="scan-buttons">
-    {/* Scan cattle box */}
-    <div className="scan-card">
-      <img src={camera} alt="Scan Cattle" className="scan-icon" />
-      <button>Scan Cattle</button>
-      <p>Scan your cattle to identify the breed</p>
-    </div>
+ <section id="scan" className="scan">
+      <div className="scan-container">
+        
+        {/* Left Side - Text */}
+        <div className="scan-text">
+          <h2>Expand your livestock<br/> knowledge.</h2>
+          <p>
+            AI-powered breed identification, identify any breed in an instant.<br/>
+            Scan the QR code to download the app.
+          </p>
+        </div>
 
-    {/* Upload image box */}
-    <div className="scan-card">
-      <img src={AddImage} alt="Upload Image" className="scan-icon" />
-      <button>Upload Image</button>
-      <p>Upload image to identify the breed</p>
-    </div>
-  </div>
-</section>
+        {/* Right Side - QR Code Card */}
+        <div className="scan-card">
+          <img src={qrCode} alt="QR Code" className="qr-image" />
+          <button className="scan-btn">SCAN ME</button>
+        </div>
+
+      </div>
+    </section>
 
      {/* Special Features Section */}
 <section id="features" className="features">

@@ -31,7 +31,7 @@
 
 .breeds-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   padding: 20px;
 }
@@ -67,7 +67,7 @@
   margin-bottom: 10px;
 }
 
-.breed-card button {
+.breed-card a {
   background: #8b4513;
   color: #fff;
   border: none;
@@ -75,8 +75,9 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
+  text-decoration: none;
 }
 
-.breed-card button:hover {
+.breed-card a:hover {
   background: #5b2c06;
 }

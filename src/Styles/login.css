@@ -198,3 +198,42 @@ button#loginBtn:hover {
     padding: 4px 8px;
   }
 }
+/* Role Selector */
+.role-selector {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.role-selector label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.role-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.role-btn {
+  padding: 8px 16px;
+  border: 2px solid #6b4226;
+  background: white;
+  color: #6B4226;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.role-btn:hover {
+  background: #6B4226;
+  color: white;
+}
+
+.role-btn.selected {
+  background: #6B4226;
+  color: white;
+}

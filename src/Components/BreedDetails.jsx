@@ -1,11 +1,11 @@
-import React from "react";
+ import React from "react";
 import "../Styles/BreedDetails.css";
-import cow2 from "../Images/cow2.png"
+import cow2 from "../Images/breedsbackground.png"
 
 
 const BreedDetails = () => {
   return (
-    <div className="breed-details">
+    <div className="breed-details" id="breed-details">
        {/* Title above hero */}
   <div className="page-title">
     <h1>Gir Cow</h1>
