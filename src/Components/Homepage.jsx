@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "../Styles/Homepage.css";
 import Globe from "../Images/Globe.png";
 import Person from "../Images/Person.png";
@@ -6,6 +7,7 @@ import missionicon from "../Images/missionicon.png";
 import camera from "../Images/camera.png";
 import AddImage from "../Images/AddImage.png";
 import featureicon from "../Images/featureicon.png";
+import feedbackprofile from "../Images/feedbackprofile.png";
 
 function Homepage() {
   return (
@@ -14,20 +16,20 @@ function Homepage() {
       <header className="navbar">
         <h1 className="logo">PashuScan</h1>
         <nav>
-           <a href="#home">Home</a>  
-          <a href="#AboutUs">About Us</a>
+           <a href="#hero">Home</a>  
+          <a href="#mission">About Us</a>
           <a href="#scan">Scan</a>
           <a href="#features">Features</a>
-          <a href="#ContactUs">Contact Us</a>
+          <a href="footer">Contact Us</a>
         </nav>
         <div className="icons">
-  <a href="#" className="lang"><img src={Globe} alt="lang" /></a>
-  <a href="#" className="profile"><img src={Person} alt="profile" /></a>
+  <a to="#" className="lang"><img src={Globe} alt="lang" /></a>
+  <Link to="/Profile" className="profile"><img src={Person} alt="profile" /></Link>
 </div>
       </header>
 
       {/* Hero Section */}
-     <section className="hero">
+     <section className="hero" id="hero">
   <div className="overlay"></div>
   <div className="hero-text">
     <h2>Know The Breed Of Your Cattles</h2>
@@ -105,7 +107,7 @@ function Homepage() {
       <img src={featureicon} alt="Popular Breeds" className="feature-icon" />
       <h4>Popular Breeds</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <a href="#">View more →</a>
+      <Link to="/CattleBreeds">View more →</Link>
     </div>
 
     {/* Feature 2 */}
@@ -113,7 +115,7 @@ function Homepage() {
       <img src={featureicon} alt="ROI" className="feature-icon" />
       <h4>ROI</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <a href="#">View more →</a>
+       <Link to="/RoiCalculator">View more →</Link>
     </div>
 
     {/* Feature 3 */}
@@ -121,7 +123,7 @@ function Homepage() {
       <img src={featureicon} alt="Blogs and Articles" className="feature-icon" />
       <h4>Blogs and Articles</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <a href="#">View more →</a>
+      <Link to="/Articles">View more →</Link>
     </div>
 
     {/* Feature 4 */}
@@ -129,7 +131,7 @@ function Homepage() {
       <img src={featureicon} alt="Expert Care" className="feature-icon" />
       <h4>Expert Care</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <a href="#">View more →</a>
+       <a href="#">View more →</a>
     </div>
 
     {/* Feature 5 */}
@@ -137,43 +139,102 @@ function Homepage() {
       <img src={featureicon} alt="Comparison" className="feature-icon" />
       <h4>Comparison</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <a href="#">View more →</a>
+       <a href="/CattleBreeds">View more →</a>
     </div>
 
   </div>
 </section>
 
 
-      {/* Feedback Section */}
-     <section id="feedback" className="feedback-section">
+     {/* Feedback Section */}
+<section id="feedback" className="feedback-section">
   <div className="container">
-    <h2 className="section-title">What Our Users Say</h2>
+    <h2 className="section-title">Feedback</h2>
     <div className="feedback-grid">
+
       <div className="feedback-card">
-        <strong>- Rahul Kumar</strong>
-        <p>"From scanning to valuable insights, PashuScan has made cattle care easier for me."</p>
+        <div className="feedback-profile">
+          <img src={feedbackprofile} alt="Rahul Kumar" className="feedback-img" />
+          <div>
+            <h3 className="feedback-name">Rahul Kumar</h3>
+            <div className="feedback-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>
+          From scanning to valuable insights, PashuScan has made cattle care easier for me.
+        </p>
       </div>
+
       <div className="feedback-card">
-         <strong>- Aishwarya</strong>
-        <p>"The breed identification is accurate and fast. Highly recommend to farmers!"</p>
+        <div className="feedback-profile">
+          <img src={feedbackprofile} alt="Aishwarya" className="feedback-img" />
+          <div>
+            <h3 className="feedback-name">Aishwarya</h3>
+            <div className="feedback-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>
+          The breed identification is accurate and fast. Highly recommend to farmers!
+        </p>
       </div>
+
       <div className="feedback-card">
-         <strong>- Arvind</strong>
-        <p>"A must-have tool for farmers. It connects us with experts easily."</p>
+        <div className="feedback-profile">
+          <img src={feedbackprofile} alt="Arvind" className="feedback-img" />
+          <div>
+            <h3 className="feedback-name">Arvind</h3>
+            <div className="feedback-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>
+          A must-have tool for farmers. It connects us with experts easily.
+        </p>
       </div>
+
     </div>
   </div>
 </section>
 
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 PashuScan. All rights reserved.</p>
-        <div>
-          <a href="#privacy">Privacy</a> | <a href="#terms">Terms</a> |{" "}
-          <a href="#contact">Contact</a>
-        </div>
-      </footer>
+   {/* Footer */}
+<footer className="footer" id="footer">
+  <div className="footer-container">
+    {/* Left: Brand */}
+    <div className="footer-col">
+      <h3 className="footer-logo">PashuScan</h3>
+      <p>Your reliable gateway to the<br/>
+         world and amazing hidden <br/>
+         adventures.</p>
+    </div>
+
+    {/* Middle: Links */}
+    <div className="footer-col">
+      <h4>Our Page</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    {/* Right: Contact */}
+    <div className="footer-col">
+      <h4>Contact Us</h4>
+      <p>📍 Ghaziabad</p>
+      <p>📞 (+91) 1234 567 890</p>
+      <p>📧 pashuscan@gmail.com</p>
+    </div>
+  </div>
+
+  {/* Bottom bar */}
+  <div className="footer-bottom">
+    <p>© 2025 PashuScan. All rights reserved.</p>
+  </div>
+</footer>
+
+    
     </div>
   );
 }
