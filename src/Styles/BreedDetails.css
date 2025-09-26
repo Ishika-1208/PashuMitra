@@ -12,13 +12,13 @@
 }
 
 /* ----------------- HERO ----------------- */
-.hero {
+.details-hero {
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.hero img {
+.details-hero img {
   width: 60%;
   height: 380px;
   object-fit: cover;
@@ -39,7 +39,7 @@
   margin-top: 0;
 } */
 
-.hero p {
+.details-hero p {
   position: absolute;
   top: 48%;
   left: 50%;
@@ -79,7 +79,7 @@
   border-radius: 12px;
   padding: 18px;
   width: 160px;
-  height: 70px;
+  height: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -164,7 +164,7 @@
 }
 
 .gallery img {
-  width: 20%;
+  width: 30%;
   min-width: 220px;
   border-radius: 10px;
   border: 2px solid #c19a6b;

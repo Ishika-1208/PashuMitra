@@ -122,7 +122,7 @@ const CattleBreeds = () => {
             <img src={cow2} alt={breed.name} />
             <h3>{breed.name}</h3>
             <p>{breed.desc}</p>
-            <a href="#">Read More</a>
+            <a href="/BreedDetails">Read More</a>
           </div>
         ))}
       </div>

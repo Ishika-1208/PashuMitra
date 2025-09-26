@@ -13,7 +13,7 @@ const BreedDetails = () => {
   </div>
 
       {/* Hero Section */}
-      <div className="hero">
+      <div className="details-hero">
         <img
           src={cow2} // Replace with breed image
           alt="Gir Cow"

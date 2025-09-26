@@ -5,6 +5,7 @@ import cow3 from "../Images/cow3.png";
 import cow4 from "../Images/cow4.png";
 import cow5 from "../Images/cow5.png";
 import cow7 from "../Images/cow7.png";
+import woodbackground from "../Images/woodbackground.png";
 
 const categories = [
   "Cattles care related",
@@ -55,10 +56,15 @@ export default function ArticlesPage() {
     article.title.toLowerCase().includes(search.toLowerCase())
   );
 
+   <div 
+  className="banner" 
+  style={{ backgroundImage: `url(${woodbackground})` }}>
+  </div>
+
   return (
     <div className="page-container">
       {/* Header / Banner */}
-      <div className="banner">
+      <div className="banner" style={{ backgroundImage: `url(${woodbackground})` }}>
         <div className="banner">
       <img src={cow6} alt="Cow" className="overlay-image" />
        </div>

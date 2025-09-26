@@ -5,7 +5,7 @@ import Globe from "../Images/Globe.png";
 import Person from "../Images/Person.png";
 import missionicon from "../Images/missionicon.png";
 // import camera from "../Images/camera.png";
-// import AddImage from "../Images/AddImage.png";
+import headerbackground from "../Images/headerbackground.png";
 import featureicon from "../Images/featureicon.png";
 import feedbackprofile from "../Images/feedbackprofile.png";
 import qrCode from "../Images/qrcode.jpg";
@@ -30,7 +30,7 @@ function Homepage() {
       </header>
 
       {/* Hero Section */}
-     <section className="hero" id="hero">
+     <section className="hero" id="hero" style={{ backgroundImage: `url(${headerbackground})` }}>
   <div className="overlay"></div>
   <div className="hero-text">
     <h2>Know The Breed Of Your Cattles</h2>
@@ -134,7 +134,7 @@ function Homepage() {
       <img src={featureicon} alt="Expert Care" className="feature-icon" />
       <h4>Expert Care</h4>
       <p>Provides the detailed information about the breeds.</p>
-       <a href="#">View more →</a>
+       <a href="#features">View more →</a>
     </div>
 
     {/* Feature 5 */}
@@ -142,7 +142,7 @@ function Homepage() {
       <img src={featureicon} alt="Comparison" className="feature-icon" />
       <h4>Comparison</h4>
       <p>Provides the detailed information about the breeds.</p>
-       <a href="/CattleBreeds">View more →</a>
+       <a href="#features">View more →</a>
     </div>
 
   </div>

@@ -10,8 +10,6 @@
   position: relative;
   width: 100%;
   height: 400px; /* adjust height as needed */
-  background-image: url('C:\Users\ishik\OneDrive\Desktop\PashuMitra4\my-app\src\Images\woodbackground.png'); /* replace with your background image */
-  background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;

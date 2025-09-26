@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../Styles/Feedback.css";
 import cow1 from "../Images/cow1.png";
+import cowicon from "../Images/cowicon.jpg";
 
 const translations = {
   en: {
@@ -34,7 +35,7 @@ const Feedback = () => {
     <div className="main-container">
       <div className="profile-card">
         <div className="header">
-          <div className="profile-image"></div>
+          <div className="profile-image" style={{ backgroundImage: `url(${cowicon})` }}></div>
         </div>
         <div className="profile-content">
           <h2>{translations[language].profileTitle}</h2>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Styles/Signup.css"; // Make sure the path is correct
 import cowIcon from "../Images/cowicon.jpg";
 import cowImage from "../Images/cow1.png";
+import { useNavigate } from "react-router-dom";
 
 const translations = {
   en: {
@@ -36,6 +37,8 @@ function Signup() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+
+   const navigate = useNavigate();
 
   useEffect(() => {
     localStorage.setItem("lang", lang);
@@ -72,7 +75,7 @@ function Signup() {
     setConfirmPassword("");
 
     // Redirect to home/login page
-    window.location.href = "/";
+     navigate("/Homepage");
   };
 
   return (

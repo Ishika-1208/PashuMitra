@@ -32,7 +32,7 @@ const navigate = useNavigate();
   const logout = () => {
     const confirmLogout = window.confirm("Are you sure you want to logout?");
     if (confirmLogout) {
-      alert("Logged out!");
+      navigate("/");
     }
   };
 

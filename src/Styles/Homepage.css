@@ -69,7 +69,7 @@
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("../Images/headerbackground.png") center/cover no-repeat;
+  background:center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
