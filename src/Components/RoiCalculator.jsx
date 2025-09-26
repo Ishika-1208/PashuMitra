@@ -36,7 +36,8 @@ const ROICalculator = () => {
   };
 
   return (
-    <div className="container">
+    <div className="roi-body">
+    <div className="roi-container">
       <h2>ROI Calculator</h2>
 
       <input
@@ -71,6 +72,7 @@ const ROICalculator = () => {
           <div key={index}>{line}</div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

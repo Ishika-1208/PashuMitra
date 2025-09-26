@@ -1,5 +1,5 @@
 /* ===== Global ===== */
-body {
+.signup-body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #efddc7, #e4c59d);
   min-height: 100vh;
@@ -12,7 +12,7 @@ body {
 /* ===== Main Container ===== */
 .main-container {
   display: flex;
-  width: 90%;
+  width: 50%;
   max-width: 1000px;
   min-height: 70vh;
   background-color: #fff;

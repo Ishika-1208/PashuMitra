@@ -22,7 +22,7 @@ const translations = {
 };
 
 const Feedback = () => {
-  const [language, setLanguage] = useState(localStorage.getItem('lang') || 'en');
+  const [language] = useState(localStorage.getItem('lang') || 'en');
   const [rating, setRating] = useState(0);
 
   useEffect(() => {
@@ -30,6 +30,7 @@ const Feedback = () => {
   }, [language]);
 
   return (
+    <div className="feedback-body">
     <div className="main-container">
       <div className="profile-card">
         <div className="header">
@@ -69,6 +70,7 @@ const Feedback = () => {
       <div className="image-container">
         <img src={cow1} alt="Cow" />
       </div>
+    </div>
     </div>
   );
 };

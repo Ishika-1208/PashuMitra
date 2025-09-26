@@ -126,7 +126,7 @@ function Homepage() {
       <img src={featureicon} alt="Blogs and Articles" className="feature-icon" />
       <h4>Blogs and Articles</h4>
       <p>Provides the detailed information about the breeds.</p>
-      <Link to="/Articles">View more →</Link>
+      <Link to="/ArticlesPage">View more →</Link>
     </div>
 
     {/* Feature 4 */}

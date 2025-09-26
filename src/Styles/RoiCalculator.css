@@ -1,4 +1,4 @@
-body {
+.roi-body {
   font-family: Arial, sans-serif;
   background:url("C:\Users\ishik\OneDrive\Desktop\PashuMitra3\my-app\src\Images\roiImage.png") center/cover no-repeat;
   display: flex;
@@ -8,24 +8,24 @@ body {
   margin: 0;
 }
 
-.container {
+.roi-container {
   background-color: #6B4226;
   padding: 20px 30px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   text-align: center;
-  width: 350px;
+  width: 500px;
   border: 5px solid #FFF0DE;
 }
 
-.container h2 {
+.roi-container h2 {
   margin-bottom: 20px;
   color: #FFF0DE;
 }
 
-.container input {
+.roi-container input {
   width: 90%;
-  padding: 10px;
+  padding: 15px;
   margin: 15px 0px;
   border: 1px solid grey;
   border-radius: 50px;
@@ -33,7 +33,7 @@ body {
   background-color: #FFF0DE;
 }
 
-.container button {
+.roi-container button {
   background-color: #FFF0DE;
   color: black;
   border: none;
@@ -45,7 +45,7 @@ body {
   margin-top: 20px;
 }
 
-.container button:hover {
+.roi-container button:hover {
   background-color: #FFF0DEce;
 }
 

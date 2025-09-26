@@ -2,8 +2,12 @@ import React from "react";
 import "../Styles/Profile.css";
 import cow1 from "../Images/cow1.png";
 import cowicon from "../Images/cowicon.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+
+const navigate = useNavigate(); 
+
   // Handlers for actions
   const editProfile = () => {
     alert("Edit Profile clicked");
@@ -22,7 +26,7 @@ const Profile = () => {
   };
 
   const feedback = () => {
-    window.location.href = "feedback.html";
+    navigate("/Feedback");
   };
 
   const logout = () => {
@@ -33,6 +37,7 @@ const Profile = () => {
   };
 
   return (
+    <div className="profile-body">
     <div className="main-container">
       {/* Profile Section */}
       <div className="profile-container">
@@ -68,6 +73,7 @@ const Profile = () => {
       <div className="image-container">
         <img src={cow1} alt="Cow" />
       </div>
+    </div>
     </div>
   );
 };

@@ -5,8 +5,12 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-body {
-  background: linear-gradient(to bottom, #6B4226, #ab846a);
+.profile-body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+   background: linear-gradient(to bottom, #efddc7, #e4c59d);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -97,7 +97,7 @@ const CattleBreeds = () => {
   return (
     <div className="breeds-wrapper">
       {/* Hero Image */}
-      <div className="hero">
+      <div className="breeds-hero">
         <img
           src={backgrounimage}
           alt="Cattle"

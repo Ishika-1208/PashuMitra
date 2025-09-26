@@ -1,6 +1,6 @@
-body {
+.feedback-body {
    font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #6B4226, #ab846a);
+   background: linear-gradient(to bottom, #efddc7, #e4c59d);
   min-height: 100vh;
   margin: 0;
   display: flex;

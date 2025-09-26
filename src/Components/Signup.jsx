@@ -76,6 +76,7 @@ function Signup() {
   };
 
   return (
+    <div className="signup-body">
     <div className="main-container">
       <div className="form-container">
         {/* Language Switcher */}
@@ -136,6 +137,7 @@ function Signup() {
       <div className="image-container">
         <img src={cowImage} alt="Decorative" />
       </div>
+    </div>
     </div>
   );
 }
