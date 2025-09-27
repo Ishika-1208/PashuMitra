@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/RoiCalculator.css";
-// import RoiImage from "../Images/roiImage.png"; // Make sure the image path is correct
+import roiImage from "../Images/roiImage.png";
 
 const ROICalculator = () => {
   const [purchaseCost, setPurchaseCost] = useState("");
@@ -36,7 +36,7 @@ const ROICalculator = () => {
   };
 
   return (
-    <div className="roi-body">
+    <div className="roi-body"  style={{ backgroundImage: `url(${roiImage})` }}>
     <div className="roi-container">
       <h2>ROI Calculator</h2>
 

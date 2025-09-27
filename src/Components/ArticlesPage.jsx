@@ -24,32 +24,57 @@ const articles = [
     title: "Forecasting Cattle and Buffalo Population in India",
     description:
       "The article explores how buffaloes, unlike cattle, occupy a paradoxical position in Indian society: they are economically vital yet culturally marginalized.",
-    image: {cow3},
+    image: cow3,
   },
   {
     id: 2,
     title: "Forecasting Cattle and Buffalo Population in India",
     description:
       "The article explores how buffaloes, unlike cattle, occupy a paradoxical position in Indian society: they are economically vital yet culturally marginalized.",
-    image: {cow4},
+    image: cow4,
   },
   {
     id: 3,
     title: "Forecasting Cattle and Buffalo Population in India",
     description:
       "The article explores how buffaloes, unlike cattle, occupy a paradoxical position in Indian society: they are economically vital yet culturally marginalized.",
-    image:{cow5},
+    image:cow5,
   },
   {
     id: 4,
     title: "Forecasting Cattle and Buffalo Population in India",
     description:
       "The article explores how buffaloes, unlike cattle, occupy a paradoxical position in Indian society: they are economically vital yet culturally marginalized.",
-    image: {cow7},
+    image: cow7,
   },
 ];
 
 export default function ArticlesPage() {
+
+
+   const [likes, setLikes] = useState({});
+
+const handleLike = (id) => {
+  setLikes((prev) => ({
+    ...prev,
+    [id]: prev[id] ? prev[id] + 1 : 1,
+  }));
+};
+
+const handleShare = (id) => {
+  const article = articles.find((a) => a.id === id);
+  if (navigator.share) {
+    navigator.share({
+      title: article.title,
+      text: article.description,
+      url: window.location.href,
+    });
+  } else {
+    alert("Sharing is not supported in this browser.");
+  }
+};
+
+
   const [search] = useState("");
 
   const filteredArticles = articles.filter((article) =>
@@ -94,15 +119,27 @@ export default function ArticlesPage() {
 
           {filteredArticles.map((article) => (
             <div key={article.id} className="article-card">
-              <img src={cow3} alt="article" />
+              <img src={article.image} alt="article" />
               <div className="article-info">
                 <h3>{article.title}</h3>
                 <p>{article.description}</p>
                 <button>Read more</button>
+
+                 {/* Like & Share Buttons */}
+      <div className="article-actions">
+        <button className="like-btn" onClick={() => handleLike(article.id)}>
+           Like
+        </button>
+        <button className="share-btn" onClick={() => handleShare(article.id)}>
+           Share
+        </button>
+      </div>
+
               </div>
             </div>
           ))}
         </main>
+
       </div>
     </div>
   );

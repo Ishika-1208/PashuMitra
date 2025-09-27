@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import "../Styles/CattleBreeds.css";
 import backgrounimage from "../Images/breedsbackground.png"
 import cow2 from "../Images/cow2.png"
-// import cow3 from "../Images/cow3.png"
+import cow4 from "../Images/cow4.png"
+import cow5 from "../Images/cow5.png"
+import cow6 from "../Images/cow6.png"
+import cow7 from "../Images/cow7.png"
+import cow8 from "../Images/cow8.png"
+import cow9 from "../Images/cow9.png"
+import cow3 from "../Images/cow3.png"
 
 const CattleBreeds = () => {
   const [search, setSearch] = useState("");
@@ -11,82 +17,82 @@ const CattleBreeds = () => {
     {
       name: "Holstein Friesian",
       desc: "Originating from the Netherlands, known for high milk yield.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow3,
     },
     {
       name: "Gir Cow",
       desc: "Originating from Gujarat, hardy and known for quality milk.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow2,
     },
     {
       name: "Sahiwal",
       desc: "One of the best dairy breeds from Punjab, India.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow9,
     },
     {
       name: "Red Sindhi",
       desc: "Popular for both milk and draught power, from Sindh.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow4,
     },
     {
       name: "Holstein Friesian",
       desc: "Originating from the Netherlands, known for high milk yield.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow5,
     },
     {
       name: "Gir Cow",
       desc: "Originating from Gujarat, hardy and known for quality milk.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow6,
     },
     {
       name: "Sahiwal",
       desc: "One of the best dairy breeds from Punjab, India.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow7,
     },
     {
       name: "Red Sindhi",
       desc: "Popular for both milk and draught power, from Sindh.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow8,
     },
     {
       name: "Holstein Friesian",
       desc: "Originating from the Netherlands, known for high milk yield.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow9,
     },
     {
       name: "Gir Cow",
       desc: "Originating from Gujarat, hardy and known for quality milk.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow3,
     },
     {
       name: "Sahiwal",
       desc: "One of the best dairy breeds from Punjab, India.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow4,
     },
     {
       name: "Red Sindhi",
       desc: "Popular for both milk and draught power, from Sindh.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow5,
     },
     {
       name: "Holstein Friesian",
       desc: "Originating from the Netherlands, known for high milk yield.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow2,
     },
     {
       name: "Gir Cow",
       desc: "Originating from Gujarat, hardy and known for quality milk.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow6,
     },
     {
       name: "Sahiwal",
       desc: "One of the best dairy breeds from Punjab, India.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow7,
     },
     {
       name: "Red Sindhi",
       desc: "Popular for both milk and draught power, from Sindh.",
-      img: "https://via.placeholder.com/300x200",
+      img: cow8,
     },
   ];
 
@@ -119,7 +125,7 @@ const CattleBreeds = () => {
       <div className="breeds-grid">
         {filteredBreeds.map((breed, index) => (
           <div key={index} className="breed-card">
-            <img src={cow2} alt={breed.name} />
+            <img src={breed.img} alt={breed.name} />
             <h3>{breed.name}</h3>
             <p>{breed.desc}</p>
             <a href="/BreedDetails">Read More</a>

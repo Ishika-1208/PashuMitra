@@ -1,36 +1,41 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "../Styles/Homepage.css";
-import Globe from "../Images/Globe.png";
+// import Globe from "../Images/Globe.png";
 import Person from "../Images/Person.png";
 import missionicon from "../Images/missionicon.png";
-// import camera from "../Images/camera.png";
+import cowicon from "../Images/cowicon.jpg";
 import headerbackground from "../Images/headerbackground.png";
 import featureicon from "../Images/featureicon.png";
 import feedbackprofile from "../Images/feedbackprofile.png";
 import qrCode from "../Images/qrcode.jpg";
+import { Link as ScrollLink} from "react-scroll";
 
 function Homepage() {
   return (
     <div className="app">
       {/* Navbar */}
       <header className="navbar">
+        <div className="logo-container">
+        <img className="logo-pic" src={cowicon} alt="logo"/>
         <h1 className="logo">PashuScan</h1>
-        <nav>
-           <a href="#hero">Home</a>  
-          <a href="#mission">About Us</a>
-          <a href="#scan">Scan</a>
-          <a href="#features">Features</a>
-          <a href="#footer">Contact Us</a>
-        </nav>
+        </div>
+           <nav>
+  <ScrollLink to="hero" smooth={true} duration={1000} offset={-80} spy={true}  activeClass="active">Home</ScrollLink>
+  <ScrollLink to="mission" smooth={true} duration={1000} offset={-80} spy={true}  activeClass="active">About Us</ScrollLink>
+  <ScrollLink to="scan" smooth={true} duration={1000} offset={-80} spy={true}  activeClass="active">Scan</ScrollLink>
+  <ScrollLink to="features" smooth={true} duration={1000} offset={-80} spy={true}  activeClass="active">Features</ScrollLink>
+  <ScrollLink to="footer" smooth={true} duration={1000} offset={-80} spy={true}  activeClass="active">Contact Us</ScrollLink>
+</nav>
+
         <div className="icons">
-  <a to="#" className="lang"><img src={Globe} alt="lang" /></a>
+  {/* <a to="#" className="lang"><img src={Globe} alt="lang" /></a> */}
   <Link to="/Profile" className="profile"><img src={Person} alt="profile" /></Link>
 </div>
       </header>
 
       {/* Hero Section */}
-     <section className="hero" id="hero" style={{ backgroundImage: `url(${headerbackground})` }}>
+     <section className="hero" id="hero" name="hero" style={{ backgroundImage: `url(${headerbackground})` }}>
   <div className="overlay"></div>
   <div className="hero-text">
     <h2>Know The Breed Of Your Cattles</h2>
@@ -43,7 +48,7 @@ function Homepage() {
 
 
      {/* Mission Section */}
-<section id="mission" className="mission">
+<section id="mission" className="mission" name="mission">
   <h3>Our Mission</h3>
   <p>
     At PashuScan, we’re dedicated to guiding you on breed identification
@@ -79,7 +84,7 @@ function Homepage() {
 </section>
 
      {/* Scanning Section */}
- <section id="scan" className="scan">
+ <section id="scan" className="scan" name="scan">
       <div className="scan-container">
         
         {/* Left Side - Text */}
@@ -101,8 +106,8 @@ function Homepage() {
     </section>
 
      {/* Special Features Section */}
-<section id="features" className="features">
-  <h3>Our Special Features</h3>
+<section id="features" className="features" name="features">
+  <h3>Our Unique Features</h3>
   <div className="features-grid">
 
     {/* Feature 1 */}
@@ -150,7 +155,7 @@ function Homepage() {
 
 
      {/* Feedback Section */}
-<section id="feedback" className="feedback-section">
+<section id="feedback" className="feedback-section" >
   <div className="container">
     <h2 className="section-title">Feedback</h2>
     <div className="feedback-grid">
@@ -200,7 +205,7 @@ function Homepage() {
 
 
    {/* Footer */}
-<footer className="footer" id="footer">
+<footer className="footer" id="footer" name="footer">
   <div className="footer-container">
     {/* Left: Brand */}
     <div className="footer-col">
@@ -214,11 +219,11 @@ function Homepage() {
     <div className="footer-col">
       <h4>Our Page</h4>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#categories">Categories</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#blogs">Blogs</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><p href="#home">Home</p></li>
+        <li><p href="#missin">About Us</p></li>
+        <li><p href="#scan">Scan</p></li>
+        <li><p href="#features">Features</p></li>
+        <li><p href="#footer">Contact Us</p></li>
       </ul>
     </div>
 

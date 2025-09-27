@@ -1,6 +1,6 @@
 .roi-body {
   font-family: Arial, sans-serif;
-  background:url("C:\Users\ishik\OneDrive\Desktop\PashuMitra3\my-app\src\Images\roiImage.png") center/cover no-repeat;
+  background:center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;

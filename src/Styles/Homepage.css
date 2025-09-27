@@ -12,10 +12,10 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  /* position: sticky;
+  position: sticky;
   top: 0;
   z-index: 1000;
-  scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 .navbar a {
@@ -27,10 +27,30 @@
 
 .navbar a:hover {
   color: #6B4226;
-  text-decoration: underline;
+  cursor: pointer;
+}
+
+.active {
+  color: #6B4226;  /* Change to your desired active color */
+  /* font-weight: bold; */
+  border-bottom: 2px solid #6B4226; /* Optional underline effect */
+}
+
+
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-pic{
+  width: 50px;
+  border-radius: 100px;
+  border: 2px solid black;
 }
 
 .logo {
+  margin-top: 10px;
   font-size: 30px;
   font-weight: bold;
   color: #6B4226;
@@ -45,7 +65,7 @@
 .profile {
   background-color: white;
   border-radius: 50px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 /* Responsive adjustments */
@@ -383,12 +403,13 @@
   border-radius: 15px;
   padding: 10px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   transition: transform 0.2s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
 }
 
 /* Image on top */
@@ -544,16 +565,16 @@
   margin: 8px 0;
 }
 
-.footer-col ul li a {
+.footer-col ul li p {
   color: #fff;
   text-decoration: none;
   font-size: 0.95rem;
   transition: color 0.3s;
 }
 
-.footer-col ul li a:hover {
+/* .footer-col ul li a:hover {
   color: #ffb400;
-}
+} */
 
 .footer-bottom {
   text-align: center;
