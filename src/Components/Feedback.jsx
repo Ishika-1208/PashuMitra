@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/Feedback.css";
 import cow1 from "../Images/cow1.png";
 import cowicon from "../Images/cowicon.jpg";
@@ -23,55 +23,68 @@ const translations = {
 };
 
 const Feedback = () => {
-  const [language] = useState(localStorage.getItem('lang') || 'en');
+  const [lang, setLang] = useState(localStorage.getItem('lang') || 'en');
   const [rating, setRating] = useState(0);
 
   useEffect(() => {
-    localStorage.setItem('lang', language);
-  }, [language]);
+    localStorage.setItem('lang', lang);
+  }, [lang]);
 
   return (
     <div className="feedback-body">
-    <div className="main-container">
-      <div className="profile-card">
-        <div className="header">
-          <div className="profile-image" style={{ backgroundImage: `url(${cowicon})` }}></div>
+      <div className="main-container">
+        {/* Language Switcher */}
+        <div className="language-switcher">
+          <button onClick={() => setLang('en')}>English</button>
+          <button onClick={() => setLang('hi')}>हिन्दी</button>
         </div>
-        <div className="profile-content">
-          <h2>{translations[language].profileTitle}</h2>
-          <p>{translations[language].profileSubtitle}</p>
 
-          <div className="question">{translations[language].questionText}</div>
+        <div className="profile-card">
+          <div className="header">
+            <div
+              className="profile-image"
+              style={{ backgroundImage: `url(${cowicon})` }}
+            ></div>
+          </div>
 
-          <div className="rating">
-            <div className="rating-title">{translations[language].ratingTitle}</div>
-            <div className="rating-star">
-              {[1,2,3,4,5].map((star) => (
-                <span
-                  key={star}
-                  className={star <= rating ? "active" : ""}
-                  onClick={() => setRating(star)}
-                >
-                  &#9733;
-                </span>
-              ))}
+          <div className="profile-content">
+            <h2>{translations[lang].profileTitle}</h2>
+            <p>{translations[lang].profileSubtitle}</p>
+
+            <div className="question">{translations[lang].questionText}</div>
+
+            <div className="rating">
+              <div className="rating-title">{translations[lang].ratingTitle}</div>
+              <div className="rating-star">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span
+                    key={star}
+                    className={star <= rating ? "active" : ""}
+                    onClick={() => setRating(star)}
+                  >
+                    &#9733;
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="review-container">
+              <label htmlFor="review">
+                <strong>{translations[lang].reviewLabel}</strong>
+              </label>
+              <br />
+              <textarea
+                id="review"
+                placeholder={translations[lang].reviewPlaceholder}
+              ></textarea>
             </div>
           </div>
+        </div>
 
-          <div className="review-container">
-            <label htmlFor="review"><strong>{translations[language].reviewLabel}</strong></label><br/>
-            <textarea
-              id="review"
-              placeholder={translations[language].reviewPlaceholder}
-            ></textarea>
-          </div>
+        <div className="image-container">
+          <img src={cow1} alt="Cow" />
         </div>
       </div>
-
-      <div className="image-container">
-        <img src={cow1} alt="Cow" />
-      </div>
-    </div>
     </div>
   );
 };

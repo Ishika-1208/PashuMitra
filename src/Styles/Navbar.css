@@ -1,0 +1,180 @@
+/* Reset & Base */
+.navbar {
+  background: #FFF0DE;
+  padding: 5px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-pic {
+  width: 50px;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
+.logo {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #6B4226;
+}
+
+/* Navigation Links */
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar nav span {
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar nav span:hover {
+  color: #6B4226;
+}
+
+.active {
+  color: #6B4226;
+  border-bottom: 2px solid #6B4226;
+}
+
+/* Icons */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 2px solid black;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Hamburger menu button (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #6B4226;
+  border-radius: 2px;
+}
+
+/* Mobile & Tablet */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .navbar nav {
+    display: none; /* hide by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .navbar nav.active {
+    display: flex; /* show when hamburger clicked */
+  }
+
+  .navbar nav span {
+    font-size: 14px;
+  }
+
+  .icons {
+    gap: 10px;
+  }
+
+  .icons img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Blur effect on navbar + page */
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Fullscreen overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff8f0;
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 2100;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+

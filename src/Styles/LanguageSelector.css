@@ -1,0 +1,119 @@
+/* Container for language selector */
+.language-container {
+  width: 400px; /* default width */
+  padding: 15px;
+  background: #FFF0DE;
+  border-radius: 15px;
+  color: #6b4226;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: absolute; /* floating dropdown */
+  top: 100px; /* adjust depending on navbar height */
+  right: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Header */
+.language-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.language-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Language list */
+.language-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px; /* scrollable if too many languages */
+  overflow-y: auto;
+}
+
+.language-list li {
+  padding: 10px;
+  border-bottom: 1px solid #d9c2a3;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.language-list li:hover {
+  background: #f5e4d0;
+}
+
+.language-list li.active {
+  font-weight: bold;
+  color: #6b4226;
+  background: #ffe4c7;
+}
+
+.dropdown{
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Scroll styling */
+.language-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.language-list::-webkit-scrollbar-thumb {
+  background: #d9c2a3;
+  border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .language-container {
+    width: 300px;
+    right: 15px;
+    top: 90px;
+  }
+  .language-header h2 {
+    font-size: 16px;
+  }
+  .language-list li {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .language-container {
+    width: 250px;
+    right: 10px;
+    top: 80px;
+  }
+  .language-header h2 {
+    font-size: 15px;
+  }
+  .language-list li {
+    padding: 7px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-container {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 70px;
+  }
+  .language-header h2 {
+    font-size: 14px;
+  }
+  .language-list li {
+    padding: 6px;
+    font-size: 13px;
+  }
+}

@@ -390,12 +390,28 @@
 
 /* Grid layout */
 .features-grid {
-  display: grid;
-  grid-template-columns:repeat(3, 1fr);;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items horizontally */
   gap: 35px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* .features-grid1{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+   gap: 35px;
   max-width: 900px;
   margin: 0 auto;
 }
+
+.features-grid2{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+   gap: 35px;
+  max-width: 900px;
+  margin: 0 auto;
+} */
 
 /* Individual card */
 .feature-card {

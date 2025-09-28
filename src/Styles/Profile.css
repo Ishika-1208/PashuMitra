@@ -10,12 +10,13 @@
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", sans-serif;
-   background: linear-gradient(to bottom, #efddc7, #e4c59d);
+   background: #d5ba93;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 89vh;
   padding: 10px;
+  overflow: hidden;
 }
 
 /* Main container */
@@ -24,7 +25,7 @@
   flex-direction: row;
   width: 90%;
   max-width: 800px;
-  min-height: 80vh;
+  height: 80vh;
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
